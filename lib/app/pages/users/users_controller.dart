@@ -23,6 +23,7 @@ class UsersController extends Controller {
   void initListeners() {
     _presenter.getUsersOnNext = (List<User> users) {
       _users = users;
+      refreshUI();
     };
 
     _presenter.getUsersOnComplete = () {

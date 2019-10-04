@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   final Router _router;
 
   MyApp() : _router = Router() {
-    // _initLogger();
+    _initLogger();
 
     // init dependency
     AppComponent.init();
