@@ -4,7 +4,6 @@ import 'package:my_flutter/data/misc/endpoints.dart';
 import 'package:my_flutter/data/persistences/mappers/user_mapper.dart';
 import 'package:my_flutter/domain/entities/user.dart';
 import 'package:my_flutter/domain/repositories/user_repository.dart';
-import 'dart:developer' as developer;
 
 class UserApiRepository extends UserRepository {
   Logger _logger;
