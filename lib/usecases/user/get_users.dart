@@ -7,12 +7,13 @@ import 'package:rxdart/rxdart.dart';
 
 class GetUsers extends UseCase<List<User>, void> {
   UserRepository _repository;
-  StreamController<List<User>> _controller;
-
-  GetUsers(this._repository, this._controller);
+  
+  GetUsers(this._repository);
 
   @override
   Future<Observable<List<User>>> buildUseCaseObservable(void ignore) async {
+    final StreamController<List<User>> _controller = StreamController();
+
     try {
       List<User> users = await _repository.getAll();
       _controller.add(users);
